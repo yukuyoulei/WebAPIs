@@ -121,7 +121,7 @@
     <Compile Include="Src\Vector.cs" />
     <Compile Include="Src\WordFilter.cs" />
     <Compile Include="WebConfigs\WebApiConfig.cs" />
-    <Compile Include="WeChatRobotController.cs" />
+    <Compile Include="Controllers\WeChatRobotController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

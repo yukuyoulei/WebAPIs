@@ -61,6 +61,7 @@ namespace WebAPIs
 			switch (result)
 			{
 				case "cfkj":
+				case "乘法口诀":
 					return ResultToJson.ToNormalResponse(FormatResult(fromOpenID, tousername, $"{ApiRandom.Instance.Next(1, 10)}×{ApiRandom.Instance.Next(1, 10)}="));
 				default:
 					return ResultToJson.ToNormalResponse(FormatResult(fromOpenID, tousername, result));
