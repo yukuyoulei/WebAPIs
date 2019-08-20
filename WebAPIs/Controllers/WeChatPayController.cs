@@ -15,9 +15,9 @@ namespace WebAPIs.Controllers
     public class WeChatPayController : ApiController
     {
         [HttpGet]
-        public HttpResponseMessage Pay()
+        public HttpResponseMessage Pay(string orderid)
         {
-            var res = APIWechatPay.Pay(1, Guid.NewGuid().ToString().Replace("-", ""), "desc", "127.0.0.1", "APP");
+            var res = APIWechatPay.Pay(1, orderid, "desc", "127.0.0.1", "APP");
             return ResultToJson.ToNormalResponse(res);
         }
 
