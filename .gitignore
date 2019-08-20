@@ -3,3 +3,4 @@ WebAPIs/WebAPIs.csproj.user
 WebAPIs/obj/*
 WebAPIs/bin/*
 .vs/*
+*.user

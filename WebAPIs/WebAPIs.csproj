@@ -84,6 +84,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\WeChatPayController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -93,6 +94,7 @@
     <Compile Include="Src\AOutput.cs" />
     <Compile Include="Src\ApiDateTime.cs" />
     <Compile Include="Src\ApiRandom.cs" />
+    <Compile Include="Src\apis\APIWechatPay.cs" />
     <Compile Include="Src\ASessionGenerator.cs" />
     <Compile Include="Src\ATwoKeyDictionary.cs" />
     <Compile Include="Src\AWebUtils.cs" />
