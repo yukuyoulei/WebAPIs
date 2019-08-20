@@ -17,7 +17,7 @@ namespace WebAPIs.Controllers
         [HttpGet]
         public HttpResponseMessage Pay()
         {
-            var res = APIWechatPay.Pay(1, Guid.NewGuid().ToString(), "desc", "127.0.0.1", "APP");
+            var res = APIWechatPay.Pay(1, Guid.NewGuid().ToString().Replace("-", ""), "desc", "127.0.0.1", "APP");
             return ResultToJson.ToNormalResponse(res);
         }
 
