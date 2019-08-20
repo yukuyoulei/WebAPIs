@@ -75,11 +75,12 @@ public static class APIWechatPay
 		var prepayId = pv.Value;
 		nstr = xe.Element("nonce_str").Value;
 		Hashtable paySignReqHandler = new Hashtable();
-		paySignReqHandler.Add("appId", AppId);
-		paySignReqHandler.Add("timeStamp", timeStamp.ToString());
-		paySignReqHandler.Add("nonceStr", nstr);
-		paySignReqHandler.Add("package", "prepay_id=" + prepayId);
-		paySignReqHandler.Add("signType", "MD5");
+		paySignReqHandler.Add("appid", AppId);
+		paySignReqHandler.Add("partnerid", MchId);
+		paySignReqHandler.Add("prepayid", prepayId);
+		paySignReqHandler.Add("package", "Sign=WXPay");
+		paySignReqHandler.Add("noncestr", nstr);
+		paySignReqHandler.Add("timestamp", timeStamp);
 		var paySign = CreateMd5Sign(paySignReqHandler);
 		var obj = new
 		{
